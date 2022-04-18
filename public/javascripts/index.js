@@ -8,8 +8,8 @@ window.onload = () => {
         const fetchTime = document.getElementById("time-fetch");
         console.log(res);
         light.innerHTML = '光照' + res.data.Data.S;
-        temper.innerHTML = '温度' + res.data.T;
-        humanlity.innerHTML = '湿度' + res.data.H;
+        temper.innerHTML = '温度' + res.data.Data.T;
+        humanlity.innerHTML = '湿度' + res.data.Data.H;
         fetchTime.innerHTML = '采集时间:' + new Date(...res.data.Time).toLocaleString();
     })
 }
