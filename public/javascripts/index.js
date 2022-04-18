@@ -11,6 +11,7 @@ window.onload = () => {
         light.innerHTML = '光照' + sensorData[0].S;
         temper.innerHTML = '温度' + sensorData[0].T;
         humanlity.innerHTML = '湿度' + sensorData[0].H;
+		res.data.Time[1] -= 1;
         fetchTime.innerHTML = '采集时间:' + new Date(...res.data.Time).toLocaleString();
     })
 }
